@@ -18,6 +18,9 @@ class AuthController extends Controller
             'name' => 'required',
             'email'=> 'required',
             'password'=> 'required',
+            'birthday' => 'required',
+            'gender' => 'required',
+            'cities' => 'required',
         ]);
 
         $data = $request->only('name', 'email', 'password');
