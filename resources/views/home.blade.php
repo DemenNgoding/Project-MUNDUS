@@ -7,5 +7,9 @@
 </head>
 <body>
     <h1>Account has been verified. Welcome to Mundus.</h1>
+
+    <a href = "/createpost">
+        <button>CREATE POST</button>
+    </a>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,10 @@ Route::post('/login', [AuthController::class, 'post_login']);
 Route::get('/register', [AuthController::class, 'get_register'])->name('register');
 
 Route::post('/register', [AuthController::class,'post_register']);
+
+Route::get('/createpost', [DashboardController::class, 'create_post'])-_name('create_post');
+
+Route::post('/post', [DashboardController::class, 'community_post']);
 
 // Route::get('/email/verify/need-verification', [VerificationController::class,'notice'])->middleware('auth')->name('verification.notice');
 
