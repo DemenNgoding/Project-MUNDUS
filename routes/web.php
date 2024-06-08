@@ -17,7 +17,7 @@ Route::get('/register', [AuthController::class, 'get_register'])->name('register
 
 Route::post('/register', [AuthController::class,'post_register']);
 
-Route::get('/createpost', [DashboardController::class, 'create_post'])-_name('create_post');
+Route::get('/createpost', [DashboardController::class, 'create_post'])->name('create_post');
 
 Route::post('/post', [DashboardController::class, 'community_post']);
 
