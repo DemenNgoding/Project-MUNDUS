@@ -13,7 +13,7 @@
     <h1> ONE STEP SOLUTION TO SEARCH COMMUNITY </h1>
     <a href="/login">
         <button> Login </button>
-    </a>
+    </a>   
     <a href="/register">
         <button> Sign Up </button>
     </a>
