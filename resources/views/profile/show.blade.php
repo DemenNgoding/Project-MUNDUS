@@ -9,13 +9,15 @@
     <!-- Image still cannot be shown. Supposed to be default image when user doesnt upload their image yet -->
     <img src="image.png" alt="Profile Picture" width=200px>
     <br><br>
-    <form action="/edit/1" method="GET">
+    <!-- Default edit: user_id = 1. To be changed to /profile/{user_id}/edit -->
+    <form action="/profile/1/edit" method="GET">
         <input type="submit" value="Edit">
     </form>
-    <p><strong>fName:</strong> {{ $user->f_name }}</p>
-    <p><strong>lName:</strong> {{ $user->l_name }}</p>
-    <p><strong>Email:</strong> {{ $user->email }}</p>
-    <p><strong>Bio:</strong> {{ $user->bio }}</p>
+    <p><strong>fName:</strong> {{$user->f_name}}</p>
+    <p><strong>lName:</strong> {{$user->l_name}}</p>
+    <p><strong>Email:</strong> {{$user->email}}</p>
+    <p><strong>Bio:</strong> {{$user->bio}}</p>
+    <p><strong>City:</strong> {{$user->city}}</p>
 </body>
 </html>
 

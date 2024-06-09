@@ -18,9 +18,9 @@ class ProfileController extends Controller
     {
         $user = User::find($user_id);
 
-        if (!$user) {
-            return redirect('/')->with('error', 'User not found');
-        };
+        // if (!$user) {
+        //     return redirect('/')->with('error', 'User not found');
+        // };
 
         return view('profile.show', compact('user'));
     }
@@ -28,9 +28,17 @@ class ProfileController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(User $user)
+    public function edit($user_id)
     {
-        return view('profile.edit', compact('user'));
+        $user = User::find($user_id);
+    
+        // if (!$user) {
+        //     return redirect('/')->with('error', 'User not found');
+        // };
+
+        $editing = true;
+            
+        return view('profile.edit', compact('user', 'editing'));
     }
 
     /**

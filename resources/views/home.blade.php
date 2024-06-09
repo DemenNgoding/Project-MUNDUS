@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Account has been verified. Welcome to Mundus.</h1>
-    <!-- Sementara id defaultnya 1 karena user buatan gua id nya 1 -->
+    <!-- Default profile: user_id = 1. To be changed to /profile/{user_id} -->
     <form action="/profile/1">
         <button><h3 href="show.blade.php">Profile</h3></button>
     </form>
