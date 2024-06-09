@@ -3,6 +3,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Post;
 
 class DashboardController extends Controller
 {
