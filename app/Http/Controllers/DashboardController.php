@@ -29,6 +29,7 @@ class DashboardController extends Controller
             $post -> image = $imagename;
         }
 
+        $post->post_date = now();
         $post -> save();
 
         return redirect()->back()->with('Success', 'Post Created Successfully');

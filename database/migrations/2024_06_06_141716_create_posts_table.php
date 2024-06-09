@@ -16,8 +16,8 @@ return new class extends Migration
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('community_id');
             $table->date('post_date');
-            $table->integer('like');
-            $table->text('captioon');
+            $table->integer('like')->default(0);
+            $table->text('caption');
             $table->timestamps();
 
             $table->foreign('user_id')->references('user_id')->on('users');
