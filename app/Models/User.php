@@ -11,6 +11,9 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    // To be able to control user_id
+    protected $primaryKey = 'user_id';
+
     /**
      * The attributes that are mass assignable.
      *
