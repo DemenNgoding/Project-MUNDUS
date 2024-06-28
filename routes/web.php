@@ -26,11 +26,18 @@ Route::post('/post', [DashboardController::class, 'community_post']);
 
 // Route::get('/email/verify/{id}/{hash}', [VerificationController::class,'verify'])->middleware(['auth', 'signed'])->name('verification.verify');
 
-Route::get('/profile/{user_id}', [ProfileController::class, 'show'])->name('profile.show');
+// Making sure that you need to be logged in before going to path inside
+Route::middleware('auth')->group(function () {
 
-// Route::resource('profile', ProfileController::class) -> only('show', 'edit', 'update') -> middleware('auth');
+    // Route::resource('profile', ProfileController::class) -> only('show', 'edit', 'update') -> middleware('auth');
+    
+    });
+    
+    // Supposed to be inside middleware. Waiting for login to work
+    Route::get('/profile/{user_id}', [ProfileController::class, 'show'])->name('profile.show');
+    Route::get('/profile/{user_id}/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    
 
-Route::get('/edit/{user_id}', [ProfileController::class, 'edit'])->name('profile.edit');
 
 Route::get('/home', function () {
     return view('home');
